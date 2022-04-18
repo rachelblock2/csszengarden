@@ -1,0 +1,232 @@
+@import "partials/typography";
+@import "partials/reset";
+@import "partials/prefix-mixins";
+@import "partials/basic-style";
+
+body{
+    background-image: url("../assets/mainImg3.jpeg");
+    background-position: center;
+    
+
+    p, a{
+        color: $color-5;
+    }
+    h3{
+        color: $color-3;
+    }
+}
+
+header{
+    background-image: url("../assets/headerImg2.jpeg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+
+    h1, h2{
+        color: white;
+        padding: .8rem;
+        
+    }
+}
+
+.summary{
+    margin-top: 7rem;
+    padding: 2rem .8rem;
+    
+    p:first-child{
+        text-indent: 5%;
+    }
+}
+
+.preamble, .explanation, .participation, .benefits, .requirements{
+    padding: 1.6rem;
+}
+.page-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section, .main {
+    margin: 1.5rem;
+}
+
+.design-selection nav ul, .design-archives nav ul, .zen-resources ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+
+h3 {
+    padding-left: 0.5rem;
+}
+
+nav ul:first-of-type{
+    padding: 1rem;
+    
+}
+nav li{
+    color: white;
+    padding: 1rem;
+}
+
+.zen-resources{
+    
+
+    li{
+        padding: 1rem;
+    }
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+
+    a {
+        background-image: url("../assets/leaf-984998.svg");
+        padding: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        
+    }
+    a:hover{
+        transform: scale(2);
+        transition-duration: 1s;
+
+    }
+}
+
+
+@media only screen and (min-width: $M) {
+    .page-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3 1fr);
+        grid-row: auto;
+    }
+
+    .design-selection nav ul, .design-archives nav ul, .zen-resources ul {
+        display: block;
+    }
+
+    header {
+
+        background-size: 100%;
+        height: 25rem;
+        background-position: bottom;
+        padding: 5rem;
+        padding-top: 9rem;
+        
+
+        h1, h2{
+            font-size: 5rem;
+            display: inline;
+            
+        }
+    }
+    .summary{
+        margin-top: 25rem;
+        font-size: 3.5rem;
+        grid-column: 1;
+        width: 100%;
+    
+    }
+
+    .preamble, .explanation, .participation, .benefits, .requirements{
+        padding: 3rem;
+        font-size: 2.2rem;
+    }
+
+    .preamble::before{
+        content: "";
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        background-image: url("../assets/BodyImg1.jpeg");
+        float: left;
+        margin: 1.5rem;
+        
+       
+    }
+
+    .explanation::before{
+        content: "";
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        background-image: url("../assets/bodyImg2.jpeg");
+        float: right;
+        margin: 1.5rem;
+       
+    }
+
+    .participation::before{
+        content: "";
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        background-image: url("../assets/bodyImg3.jpeg");
+        float: left;
+        margin: 1.5rem;
+       
+    }
+
+    .benefits::before{
+        content: "";
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        background-image: url("../assets/bodyImg4.jpeg");
+        float: right;
+        margin: 1.5rem;
+       
+
+    }
+
+    .requirements::before{
+        content: "";
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        background-image: url("../assets/bodyImg5.jpeg");
+        float: left;
+        margin: 1.5rem;
+       
+    }
+
+    .intro, .main {
+        grid-column: 2/3;
+    }
+
+    .main {
+        grid-row: 2;
+    }
+
+    .sidebar {
+        grid-column: 3/4;
+        grid-row: 2;
+        
+        
+        
+    }
+
+    footer {
+        
+        padding: 2rem;
+    
+        a {
+            font-size: 2.5rem;
+            padding: 2rem;
+            
+            
+        }
+       
+    }
+}
+
